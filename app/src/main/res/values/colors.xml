@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#CCCCCC</color>-->
+    <color name="colorPrimary">#0f1a20</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--apples rose gold below - for luxury feeling-->
+    <color name="cellColor">#8bffe6ea</color>
+    <color name="buildingTextBackground">#a5000000</color>
+    <color name="buildingText">#ffffff</color>
+    <color name="buildingDetailText">#a5000000</color>
+    <color name="appBar">#DDA6AE</color>
+</resources>

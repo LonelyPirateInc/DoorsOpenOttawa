@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Doors Open Ottawa</string>
+    <string name="get_data">Get data</string>
+    <string name="building_name_placeholder">Building name</string>
+    <string name="about_dialog">Anton Antonenko (anto0084)</string>
+</resources>
