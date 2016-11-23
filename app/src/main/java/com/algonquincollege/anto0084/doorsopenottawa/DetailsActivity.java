@@ -119,7 +119,7 @@ public class DetailsActivity extends FragmentActivity implements OnMapReadyCallb
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+                    finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

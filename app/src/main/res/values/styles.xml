@@ -9,6 +9,7 @@
         <!--<item name="android:actionBarTabTextStyle">@color/appBar</item>-->
         <!--<item name="android:textColor">@android:color/white</item>-->
         <item name="android:actionBarItemBackground">@color/appBar</item>
+        <item name="android:actionMenuTextColor">@color/colorPrimary</item>
 
 
         <item name="android:colorPrimary">@color/colorPrimary</item>
