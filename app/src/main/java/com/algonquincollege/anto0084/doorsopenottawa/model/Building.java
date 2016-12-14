@@ -81,7 +81,7 @@ public class Building {
     public void setHours(JSONArray hours) {
         this.open_hours = hours;
 
-         date = "";
+        date = "";
         for (int i=0; i<open_hours.length(); i++){
             try {
                 date += open_hours.getJSONObject(i).getString("date") + "\n";

@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,7 +22,9 @@ import org.w3c.dom.Text;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Purpose: customize the Building cell for each building displayed in the ListActivity (i.e. MainActivity).
@@ -34,7 +38,7 @@ import java.util.List;
  *
  */
 
-public class BuildingAdapter extends ArrayAdapter<Building> {
+public class BuildingAdapter extends ArrayAdapter<Building>{
 
     private Context context;
     private List<Building> buildingList;
@@ -84,13 +88,63 @@ public class BuildingAdapter extends ArrayAdapter<Building> {
             container.building = building;
             container.view = view;
 
-            ImageLoader loader = new ImageLoader();
-            loader.execute(container);
+            try {
+                ImageLoader loader = new ImageLoader();
+                loader.execute(container);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
 
         return view;
     }
+
+
+
+//    @Override
+//    public Filter getFilter() {
+//
+//        Filter filter = new Filter() {
+//
+//            @SuppressWarnings("unchecked")
+//            @Override
+//            protected void publishResults(CharSequence constraint, FilterResults results) {
+//
+//                buildingList = (List<Building>) results.values;
+//                notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            protected FilterResults performFiltering(CharSequence constraint) {
+//
+//                FilterResults results = new FilterResults();
+//                ArrayList<String> FilteredArrayNames = new ArrayList<String>();
+//
+//                // perform your search here using the searchConstraint String.
+//
+//                constraint = constraint.toString().toLowerCase();
+//                for (int i = 0; i < buildingList.size(); i++) {
+//                    String dataNames = buildingList.get(i).getName();
+//                    if (dataNames.toLowerCase().startsWith(constraint.toString()))  {
+//                        FilteredArrayNames.add(dataNames);
+//                    }
+//                }
+//
+//                results.count = FilteredArrayNames.size();
+//                results.values = FilteredArrayNames;
+//                Log.e("VALUES", results.values.toString());
+//
+//                return results;
+//            }
+//        };
+//
+//        return filter;
+//    }
+//
+
+
+
 
     // container for AsyncTask params
     private class BuildingAndView {

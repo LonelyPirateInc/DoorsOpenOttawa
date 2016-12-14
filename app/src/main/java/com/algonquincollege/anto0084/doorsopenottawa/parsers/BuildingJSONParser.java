@@ -24,6 +24,7 @@ public class BuildingJSONParser {
         try {
             JSONObject jsonResponse = new JSONObject(content);
             JSONArray buildingArray = jsonResponse.getJSONArray("buildings");
+
             List<Building> buildingList = new ArrayList<>();
 
             for (int i = 0; i < buildingArray.length(); i++) {
@@ -46,5 +47,18 @@ public class BuildingJSONParser {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static Building parseBuilding ( String content ) {
+        try {
+            JSONObject jsonResponse = new JSONObject(content);
+            Building new_building = new Building();
+            new_building.setBuildingId(Integer.parseInt(jsonResponse.getString("buildingId")));
+            return new_building;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+
     }
 }

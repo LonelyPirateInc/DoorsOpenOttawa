@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/about_dialog"
-        android:title="About"
+
+    <item
+        android:id="@+id/add_building"
+        android:title="Add_Building"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_add" />
+
+    <item android:id="@+id/action_delete_data"
+        android:title="Delete"
+        android:icon="@android:drawable/ic_menu_delete"
         android:orderInCategory="100"
         android:showAsAction="always"/>
+
+    <item android:id="@+id/search"
+        android:title="Search Title"
+        android:icon="@android:drawable/ic_menu_search"
+        android:showAsAction="collapseActionView|always"
+        android:actionViewClass="android.widget.SearchView" />
+
+
+
+    <group android:id="@+id/sort_options" android:checkableBehavior="single">
+
+        <item android:id="@+id/action_sort_name_asc"
+            android:title="Sort by Name (a-z)"
+            android:checked="false" />
+        <item android:id="@+id/action_sort_name_dsc"
+            android:title="Sort by Name (z-a)"
+            android:checked="false" />
+        <item
+            android:id="@+id/about_dialog"
+            android:title="About"
+            android:checked="false"/>
+    </group>
+
+
 </menu>
